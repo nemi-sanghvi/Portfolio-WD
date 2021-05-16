@@ -1,0 +1,1343 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Portfolio</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/avtar.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/avtar.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/avtar.png">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,500&display=swap"
+    rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/owl.carousel.min.css">
+  <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+
+
+
+  <style>
+    #owl-demo .item img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+
+    .whole-body {
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -o-box-sizing: border-box;
+      -ms-box-sizing: border-box;
+
+    }
+
+    #sidebar {
+      min-width: 270px;
+      max-width: 270px;
+      background: #353b48;
+      color: #fff;
+      -webkit-transition: all .4s ease-in-out;
+      -moz-transition: all .4s ease-in-out;
+      -ms-transition: all .4s ease-in-out;
+      -o-transition: all .4s ease-in-out;
+      transition: all .4s ease-in-out;
+      position: relative;
+    }
+
+    #content {
+      background-color: #f9fafc;
+    }
+
+    #sidebar .sidebar-menu-list li a {
+      padding: 10px 0;
+      display: block;
+      color: rgba(255, 255, 255, .6);
+      border-bottom: 1px solid rgba(255, 255, 255, .1);
+      font-size: 16px;
+      text-decoration: none;
+    }
+
+    #sidebar h1 {
+      margin-bottom: 20px;
+      font-weight: 700;
+      font-size: 20px;
+      text-align: center;
+    }
+
+    #sidebar h1 .logo {
+      color: #fff;
+    }
+
+    #sidebar .sidebar-menu-list li a span {
+      color: #44bef1;
+    }
+
+    #sidebar .sidebar-menu-list li.active>a {
+      background: 0 0;
+      color: #fff;
+    }
+
+    #sidebar .sidebar-menu-list li {
+      margin-bottom: 20px;
+    }
+
+    #content {
+      width: 100%;
+      padding: 0;
+      min-height: 100vh;
+      -webkit-transition: all .3s;
+      -o-transition: all .3s;
+      transition: all .3s;
+      max-width: 100%;
+    }
+
+    #sidebar .custom-menu {
+      position: relative;
+    }
+
+    #sidebar .btn-sidebar {
+      position: absolute;
+      right: -37px;
+      top: 20px;
+      clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+      background-color: #353b48;
+      border: none;
+      box-shadow: none;
+    }
+
+
+    #sidebar.active {
+      margin-left: 0;
+    }
+
+    #sidebar {
+      margin-left: -244px;
+    }
+
+    .whole-content-box {
+      position: relative;
+    }
+
+    #content .information li i {
+      transition: transform .4s ease-out;
+    }
+
+    #content .information li:hover i {
+      transform: translateX(-4px);
+      color: #3fb8f1;
+    }
+
+    /* About */
+    #content .information {
+      list-style-type: none;
+      padding: 0px;
+    }
+
+    #content .information li {
+      margin: 15px 0px;
+      font-size: larger;
+    }
+
+    .whole-body .img-fluid {
+      object-fit: cover;
+    }
+
+    hr.border {
+      margin: 30px 0px;
+    }
+
+    .portfolio .service-box {
+      max-width: 70%;
+      /* border: 1px solid black; */
+      margin: 30px;
+      padding: 30px;
+      background-color: #3445b4f2;
+      color: white;
+      max-width: 65%;
+      background: rgb(53, 59, 72);
+      background: linear-gradient(180deg, rgba(53, 59, 72, 1) 93%, rgba(62, 184, 241, 1) 100%);
+    }
+
+    .portfolio .service-icon svg {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      fill: #3eb8f1;
+    }
+
+    .portfolio .service-icon {
+      margin-bottom: 20px;
+    }
+
+    .portfolio .service-icon {
+      border: 1px solid white;
+      padding: 14px;
+      border-radius: 50%;
+      background-color: transparent;
+      width: 70px;
+      height: 70px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .portfolio .title h1 {
+      position: relative;
+      display: inline-block;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+
+    .portfolio .title h1::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 3px;
+      background-color: #3eb8f1;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+    }
+
+    .portfolio .pannel {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .portfolio .nav-pills .nav-link.active,
+    .nav-pills .show>.nav-link {
+      border-bottom: 2px solid #353b48;
+      border-radius: 0px;
+      display: inline-block;
+      background-color: transparent;
+      color: #2196f3;
+      opacity: 1;
+      font-size: 20px;
+      position: relative;
+    }
+
+    .portfolio .pannel li .nav-link {
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .portfolio .project-box {
+      overflow: hidden;
+      z-index: 0;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      border-radius: 18px;
+    }
+
+    .portfolio .project-image::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      background-blend-mode: darken;
+      background-color: #00000014;
+    }
+
+    .portfolio .project-image:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      background-blend-mode: darken;
+      background-color: #353b48;
+      opacity: 0;
+    }
+
+    .portfolio .project-image:hover::after {
+      opacity: 0.5;
+    }
+
+    .portfolio .project-content {
+      position: absolute;
+      bottom: 0;
+      padding: 20px 30px;
+      background-color: aliceblue;
+      opacity: 0;
+      transition: all .4s ease-in-out;
+      transform: translateY(100%);
+      width: 100%;
+      max-width: 100%;
+    }
+
+    .portfolio .project-box:hover .project-content {
+      opacity: 1;
+      transform: translateY(10%);
+    }
+
+    .portfolio .project-box .enlarge-cap {
+      position: absolute;
+      top: 0;
+      right: 0;
+      opacity: 0;
+      transition: all .3s ease-in-out;
+      font-size: 25px;
+      color: white;
+      left: 0;
+      bottom: 0;
+      background-color: #00000066;
+    }
+
+    .portfolio .project-box .enlarge-cap a {
+      color: white;
+      position: absolute;
+      right: 0;
+      top: 20px;
+      transition: all .4s ease-in-out;
+      transform: translateX(40px);
+    }
+
+    .portfolio .project-box:hover .enlarge-cap a {
+      color: white;
+      transform: translateX(-40px);
+    }
+
+    .portfolio .project-box:hover .enlarge-cap {
+      opacity: 1;
+    }
+
+    .project-box .project-image img {
+      transition: transform .3s ease-in-out;
+    }
+
+    .project-box:hover .project-image img {
+      transform: scale(1.2);
+    }
+
+    .bottom-border {
+      padding-bottom: 17px;
+      border-bottom: 3px solid #dee2e6 !important;
+    }
+
+    .slideInLeft {
+      -webkit-animation-name: slideInLeft;
+      animation-name: slideInLeft;
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+      animation: slideInLeft ease 5s infinite;
+    }
+
+    #content .information li a {
+      color: initial;
+      text-decoration: none;
+    }
+
+    .portfolio .work-content p {
+      font-size: x-large;
+    }
+
+    .portfolio .work-content h2 {
+      font-size: xx-large;
+      color: #256da7;
+    }
+
+    .project-image img {
+      min-height: 437px;
+    }
+
+    @-webkit-keyframes slideInLeft {
+      0% {
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+        visibility: visible;
+      }
+
+      100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slideInLeft {
+      0% {
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+        visibility: visible;
+      }
+
+      100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+      }
+    }
+
+    .skills-box .progress {
+      height: 25px;
+      margin-bottom: 15px;
+    }
+
+    .card {
+      border: none;
+      box-shadow: 0 0 30px 0 rgb(200 200 200 / 20%);
+    }
+
+    .portfolio .user-avtar {
+      margin: 0 auto;
+      text-align: center;
+      margin-bottom: 30px;
+      max-width: 200px;
+    }
+
+    .portfolio .user-avtar img {
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+    }
+
+    .social-icons-box .social-icons {
+      list-style-type: none;
+      padding: 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .social-icons-box .social-icons li {
+      margin: 0px 15px;
+    }
+
+    .social-icons-box .social-icons li a {
+      color: white;
+      display: flex;
+      text-decoration: none;
+      justify-content: center;
+      align-items: center;
+      border-radius: 30px;
+      width: 30px;
+      height: 30px;
+      background-color: #44bef1;
+      transition: transform .4s ease;
+    }
+
+    .social-icons-box .social-icons li:hover a {
+      transform: scale(1.2);
+    }
+
+    .skills-box .progress-bar {
+      background-color: #353b48;
+    }
+
+    .portfolio .second-row {
+      margin-top: 40px;
+    }
+
+    .portfolio .work-content {
+      margin: 15px 0px;
+    }
+
+    .portfolio .work-content a,
+    .remume-btn {
+      background-color: #353b48;
+      border: none;
+      box-shadow: inset 0px 0px 0px 0px #44bef1;
+      transition: all .4s ease-out;
+    }
+
+    .portfolio .work-content a:hover,
+    .remume-btn:hover {
+      /* box-shadow: inset 400px 0px 0px 0px #44bef1; */
+      background-color: #256da7;
+    }
+
+    .portfolio .field-title {
+      position: absolute;
+      top: 40%;
+      color: white;
+      left: 33%;
+      transform: translate(-50%, -50%);
+      z-index: 50;
+    }
+
+    .portfolio .field-title span {
+      font-size: 50px;
+
+    }
+
+    .portfolio .field-title span.typing {
+      border-bottom: 2px solid #03a9f4;
+      padding-bottom: 5px;
+    }
+
+    /* shake animation */
+    .shake {
+      -webkit-animation-name: shake;
+      animation-name: shake;
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+      animation: shake ease 4s infinite;
+    }
+
+    .background-w {
+      position: relative;
+    }
+
+    .portfolio .background-w:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #00000029;
+      z-index: 20;
+      overflow: hidden;
+      width: 100%;
+      height: 99%;
+    }
+
+    .portfolio .background-w {
+      overflow: hidden;
+      z-index: 0;
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .portfolio .work-image img {
+      width: 100%;
+      height: auto;
+    }
+
+    .resume-content p {
+      font-size: x-large;
+      font-weight: 600;
+    }
+
+    .portfolio .aboutme-content span {
+      font-size: x-large;
+      color: #9e9e9e;
+    }
+
+    .portfolio .aboutme-content p {
+      font-size: larger;
+      margin-top: 15px;
+    }
+
+    .portfolio .skills {
+      margin-bottom: 40px;
+    }
+    .portfolio .service-content h3 {
+    font-size: larger;
+}
+
+    @-webkit-keyframes shake {
+
+      0%,
+      100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+      }
+
+      10%,
+      30%,
+      50%,
+      70%,
+      90% {
+        -webkit-transform: translate3d(-10px, 0, 0);
+        transform: translate3d(-10px, 0, 0);
+      }
+
+      20%,
+      40%,
+      60%,
+      80% {
+        -webkit-transform: translate3d(10px, 0, 0);
+        transform: translate3d(10px, 0, 0);
+      }
+    }
+
+    @keyframes shake {
+
+      0%,
+      100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+      }
+
+      10%,
+      30%,
+      50%,
+      70%,
+      90% {
+        -webkit-transform: translate3d(-10px, 0, 0);
+        transform: translate3d(-10px, 0, 0);
+      }
+
+      20%,
+      40%,
+      60%,
+      80% {
+        -webkit-transform: translate3d(10px, 0, 0);
+        transform: translate3d(10px, 0, 0);
+      }
+    }
+
+
+    /* media css */
+    @media screen and (max-width:1440px) {
+      .portfolio .service-content h3 {
+        font-size: larger;
+      }
+    }
+    @media screen and (max-width:1300px) {
+      .portfolio .service-content h3 {
+        font-size: larger;
+      }
+    }
+
+    @media screen and (max-width:1200px) {
+      .portfolio .service-box {
+        max-width: 100%;
+        padding: 20px 15px;
+        margin: 12px 0px;
+      }
+
+      .portfolio .work-content p {
+        font-size: large;
+      }
+
+      .portfolio .work-content h2 {
+        font-size: x-large;
+      }
+    }
+
+    @media screen and (max-width:1023px) {
+      .portfolio .work-content {
+        margin: 15px 0px;
+      }
+
+      .portfolio .second-row {
+        margin-top: 15px;
+      }
+
+      .portfolio .service-content h3,
+      .portfolio .project-content h4 {
+        font-size: large;
+      }
+
+      .project-box .project-image img {
+        transition: transform .3s ease-in-out;
+        width: 100%;
+        height: 300px;
+        min-height: 225px;
+      }
+    }
+
+    @media screen and (max-width:767px) {
+      #content {
+        padding: 70px 16px 30px !important;
+      }
+
+      .portfolio .nav-pills .nav-link.active,
+      .nav-pills .show>.nav-link {
+        font-size: initial;
+      }
+
+      .portfolio .service-icon svg {
+        width: 40px;
+        height: 40px;
+      }
+
+      .portfolio .field-title span {
+        font-size: medium;
+      }
+
+      #content .information {
+        margin-top: -11px;
+      }
+
+      #content .information li {
+        font-size: small;
+      }
+
+      .portfolio .work-content p {
+        font-size: initial;
+      }
+
+      .portfolio .work-content h2 {
+        font-size: larger;
+      }
+
+      .portfolio .work-content a,
+      .remume-btn {
+        font-size: small;
+      }
+
+      .portfolio .second-row {
+        flex-direction: column-reverse;
+      }
+
+      .skills-box .progress {
+        margin-bottom: 10px;
+      }
+
+      .portfolio .field-title h1 {
+        font-size: medium;
+      }
+
+      .resume-content p {
+        font-size: medium;
+        font-weight: 600;
+      }
+
+      .portfolio .project-box .project-image {
+        min-height: auto;
+      }
+
+      .portfolio .aboutme-content span {
+        font-size: larger;
+      }
+
+      .project-box .project-image img {
+        height: auto;
+        min-height: initial;
+      }
+
+    }
+
+    @media screen and (max-width:479px) {
+      #content {
+        padding: 70px 0px 30px !important;
+      }
+    }
+
+    @media screen and (max-width:320px) {}
+  </style>
+</head>
+
+<body>
+
+  <div class="whole-body">
+    <section>
+      <div class="portfolio whole-content-box d-flex">
+
+        <nav id="sidebar">
+          <div class="custom-menu">
+            <button type="button" id="sidebarCollapse" class="btn btn-primary btn-sidebar">
+              <i class="fa fa-bars"></i>
+              <span class="sr-only">Toggle Menu</span>
+            </button>
+            <div class="side-bar-box p-4">
+              <div class="user-avtar">
+                <img src="./images/avtar.png" alt="" class="img-fluid rounded-circle mx-auto d-block">
+              </div>
+              <h3 class="my-3 mx-auto d-flex justify-content-center align-items-center">Nemi Sanghvi</h3>
+              <ul class="sidebar-menu-list list-unstyled components mb-5">
+                <li class="active">
+                  <a href="#home" class="menu-select"><span class="fa fa-home me-3"></span> Home</a>
+                </li>
+                <li>
+                  <a href="#aboutme" class="menu-select"><span class="fa fa-user me-3"></span> About Me</a>
+                </li>
+                <li>
+                  <a href="#resume" class="menu-select"><span class="fa fa-file-text me-3"></span>Resume</a>
+                </li>
+                <li>
+                  <a href="#workingplatforms" class="menu-select"><span class="fa fa-cogs me-3"></span>Working
+                    Platforms</a>
+                </li>
+                <li>
+                  <a href="#myworks" class="menu-select"><span class="fa fa-briefcase me-3"></span> My Works</a>
+                </li>
+                <li>
+                  <a href="#skills" class="menu-select"><span class="fa fa-code me-3"></span>Skills</a>
+                </li>
+
+              </ul>
+              <div class="social-icons-box">
+                <ul class="social-icons">
+                  <li><a href="https://www.linkedin.com/in/nemi-sanghvi-b0495717a/" target="_blank"><span
+                        class="fa fa-linkedin"></span></a></li>
+                  <li><a
+                      href="https://api.whatsapp.com/send?phone=917265985208&text=Hi%20there,%20How%20may%20I%20help%20you?"
+                      target="_blank"><span class="fa fa-whatsapp"></span></a></li>
+                  <li><a href="https://github.com/nemi-sanghvi" target="_blank"><span class="fa fa-github"></span></a>
+                  </li>
+                  <li><a href="https://twitter.com/itsnemisanghvi/status/1279640705258774529" target="_blank"><span
+                        class="fa fa-twitter"></span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div id="content" class="p-4  pt-5">
+          <div class="container-fluid">
+            <!-- Background-wallpaper -->
+            <div class="portfolio background-up mb-4">
+              <div class="background-w">
+                <video width="100%" height="100%" style="background-color: brown;" autoplay muted loop playsinline
+                  preload="metadata">
+                  <source src="./images/video.mp4" type="video/mp4">
+                </video>
+                <div class="field-box">
+                  <div class="field-title">
+                    <h1>Hi There,</h1>
+                    <span>I'm</span> &nbsp;<span class="typing"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+            <!-- About -->
+            <div class="portfolio about-us" id="aboutme">
+              <div class="row">
+                <div class="col-12">
+                  <div class="title mb-2">
+                    <h1>About Me</h1>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-body">
+                  <div class="aboutme-content">
+                    <span>I'm a Web and UI Designer from Ahmedabad, India.</span>
+                    <p>I enjoy taking complex problems and turning them into simple and beautiful interface designs. I
+                      also love to write simple and clean code with the best practice of classes and structure of
+                      coding, Whether it would be HTML5, CSS3 or Bootstrap.</p>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-6 col-md-12 col-12">
+                      <ul class="information">
+                        <li><i class="fa fa-chevron-right me-2" aria-hidden="true"></i><strong>Name:</strong><span
+                            class="ms-2">Nemi Sanghvi</span></li>
+                        <li><i class="fa fa-chevron-right me-2" aria-hidden="true"></i><strong>Age:</strong><span
+                            class="ms-2">23</span></li>
+                        <li><i class="fa fa-chevron-right me-2" aria-hidden="true"></i><strong>Date of
+                            Birthday:</strong><span class="ms-2">13/05/1998</span></li>
+                        <li><i class="fa fa-chevron-right me-2" aria-hidden="true"></i><strong>Phone no:</strong><span
+                            class="ms-2"><a href="tel:+917265985208">+917265985208</a></span></li>
+                        <li><i class="fa fa-chevron-right me-2" aria-hidden="true"></i><strong>Email id:</strong><span
+                            class="ms-2"><a href="mailto:nemisanghvi5@gmail.com">nemisanghvi5@gmail.com</a></span></li>
+                      </ul>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-12">
+                      <ul class="information">
+                        <li><i class="fa fa-chevron-right me-2" aria-hidden="true"></i><strong>Degree:</strong><span
+                            class="ms-2">B.Tech in Computer Engineering(GIT)</span></li>
+                        <li><i class="fa fa-chevron-right me-2" aria-hidden="true"></i><strong>Country:</strong><span
+                            class="ms-2">India</span></li>
+                        <li><i class="fa fa-chevron-right me-2" aria-hidden="true"></i><strong>City:</strong><span
+                            class="ms-2">Ahmedabad</span></li>
+                        <li><i class="fa fa-chevron-right me-2" aria-hidden="true"></i><strong>Pin code:</strong><span
+                            class="ms-2">380007</span></li>
+
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr class="border">
+            <!--Project-info -->
+            <div class="portfolio project-info" data-aos="zoom-in-up">
+              <div class="container-fluid">
+                <div class="row bg-light position-relative">
+                  <div class="col-lg-6 col-md-12 col-12">
+                    <div class="work-image">
+                      <img src="./images/Psd-to-HTML.png" alt="" class="img-fluid">
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-md-12 col-12">
+                    <div class="work-content">
+                      <h2 class="mb-3">PSD to HTML5 </h2>
+                      <p>Been working for 1 year in the conversion of PSD TO HTML5. I have made many projects of pure
+                        custom HTML and also have a good understanding and experience in the conversion of PSD to HTML5
+                        with mobile responsive.</p>
+                      <a href="https://www.google.com/" class="btn btn-primary">Read More</a>
+                    </div>
+                  </div>
+                </div>
+                <!--  -->
+                <div class="row bg-light position-relative second-row">
+                  <div class="col-lg-6 col-md-12 col-12">
+                    <div class="work-content">
+                      <h2 class="mb-3">UI Developer with Bootstrap Skills</h2>
+                      <p>I am now familiar with working in bootstrap for the last 6 months and I have made few websites
+                        in bootstrap using the framework. Bootstrap is a free and open-source CSS framework directed at
+                        responsive, mobile-first front-end web development so it would be much easier  to code in it. It
+                        contains CSS and JavaScript-based design templates for typography, forms, buttons, navigation,
+                        and other interface components of which is my profound liking.</p>
+                      <a href="https://www.google.com/" class="btn btn-primary">Read More</a>
+                    </div>
+                  </div>
+                  <div class="col-lg-6   col-md-12 col-12">
+                    <div class="work-image">
+                      <img src="./images/bootstrap-chart.png" alt="" class="img-fluid">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr class="border">
+            <!-- resume -->
+            <div class="portfolio resume-up" id="resume">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="title mb-2">
+                      <h1>Resume</h1>
+                    </div>
+                  </div>
+                </div>
+                <!--  -->
+                <div class="card">
+                  <div class="card-body">
+                    <div class="resume-content">
+                      <p>Here I'm showcasing my work experience and education!</p>
+                      <a href="" type="button"
+                        class="btn btn btn-dark remume-btn shake">Download Resume</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr class="border">
+            <!-- Things i know -->
+            <div class="portfolio knowledge">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="title mb-2">
+                      <h1>Things I know</h1>
+                    </div>
+                  </div>
+                </div>
+                <!--  -->
+                <div class="card">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-md-6 col-12">
+                        <div class="design-image">
+                          <img src="./images/web-design.png" class="img-fluid" alt="">
+                        </div>
+                      </div>
+                      <div class="col-md-6 col-12">
+                        <div class="design-image">
+                          <img src="./images/UX-UI.jpg" class="img-fluid" alt="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr class="border">
+            <!-- services -->
+            <div class="portfolio service-up" id="workingplatforms">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="title mb-2">
+                      <h1>Working Platforms</h1>
+                    </div>
+                  </div>
+                </div>
+                <div class="card" data-aos="flip-right">
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-md-4">
+                        <div class="service-box">
+                          <div class="service-icon">
+                            <svg class="vscode" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48px"
+                              height="48px">
+                              <linearGradient id="HjBUFHyNtcsDcBgnZBZ2Sa" x1="37.8" x2="37.8" y1="43.37" y2="7.42"
+                                gradientUnits="userSpaceOnUse">
+                                <stop offset="0" stop-color="#29b6f6" />
+                                <stop offset="1" stop-color="#13b2f6" />
+                              </linearGradient>
+                              <path fill=""
+                                d="M34.176,4.249c0.188,0.092,5.688,2.716,8.374,3.998C43.437,8.67,44,9.564,44,10.546v26.86 c0,0.981-0.559,1.874-1.443,2.299c-2.548,1.228-7.611,3.666-7.948,3.826C34.361,43.649,33.709,44,33.181,44 c-0.678,0-1.133-0.316-1.58-0.73L34,35.711V5.715l-2.254-1.135C32.228,4.109,32.896,4,33.291,4C33.653,4,33.948,4.138,34.176,4.249z" />
+                              <linearGradient id="HjBUFHyNtcsDcBgnZBZ2Sb" x1="6.085" x2="34.793" y1="34.801" y2="7.173"
+                                gradientUnits="userSpaceOnUse">
+                                <stop offset=".115" stop-color="#0076bb" />
+                                <stop offset=".257" stop-color="#0069b0" />
+                                <stop offset=".28" stop-color="#0069b0" />
+                                <stop offset=".424" stop-color="#0069b0" />
+                                <stop offset=".491" stop-color="#0072b7" />
+                                <stop offset=".577" stop-color="#0076bb" />
+                                <stop offset=".795" stop-color="#0076bb" />
+                                <stop offset="1" stop-color="#006eb9" />
+                              </linearGradient>
+                              <path fill=""
+                                d="M9,33.896l25-19.023V5.83c0-1.299-1.662-1.808-2.337-1.184 C31.008,5.25,4.658,29.239,4.658,29.239c-0.9,0.83-0.849,2.267,0.107,3.032c0,0,1.324,1.232,1.803,1.574 C7.304,34.37,8.271,34.43,9,33.896z" />
+                              <path fill=""
+                                d="M9,14.104l25,19.054v8.771c0,1.198-1.42,2.193-2.399,1.341L4.658,18.761 c-0.9-0.83-0.849-2.267,0.107-3.032c0,0,1.324-1.232,1.803-1.574C7.304,13.63,8.271,13.57,9,14.104z" />
+                            </svg>
+                          </div>
+                          <div class="service-content">
+                            <h3>Visual Studio Code</h3>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="service-box">
+                          <div class="service-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="d-block my-1"
+                              viewBox="0 0 118 94" role="img">
+                              <title>Bootstrap</title>
+                              <path fill-rule="" clip-rule="evenodd"
+                                d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"
+                                fill=""></path>
+                            </svg>
+                          </div>
+                          <div class="service-content">
+                            <h3>Bootstrap</h3>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-md-4">
+                        <div class="service-box">
+                          <div class="service-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="" viewBox="0 0 30 30" width="30px"
+                              height="30px">
+                              <path
+                                d="M 6 4 C 4.895 4 4 4.895 4 6 L 4 24 C 4 25.105 4.895 26 6 26 L 24 26 C 25.105 26 26 25.105 26 24 L 26 6 C 26 4.895 25.105 4 24 4 L 6 4 z M 8 9.9921875 L 11.978516 9.9921875 C 13.947516 9.9921875 15.294922 11.339125 15.294922 13.328125 C 15.294922 15.283125 13.898344 16.623047 11.902344 16.623047 L 9.7636719 16.623047 L 9.7636719 19.857422 L 8 19.857422 L 8 9.9921875 z M 9.7636719 11.46875 L 9.7636719 15.160156 L 11.507812 15.160156 C 12.765813 15.160156 13.503906 14.504125 13.503906 13.328125 C 13.503906 12.119125 12.784672 11.46875 11.513672 11.46875 L 9.7636719 11.46875 z M 19.207031 12.226562 C 20.984031 12.226562 22.099656 13.013047 22.222656 14.373047 L 20.630859 14.373047 C 20.507859 13.847047 20.007844 13.511719 19.214844 13.511719 C 18.442844 13.511719 17.861328 13.881875 17.861328 14.421875 C 17.861328 14.845875 18.21675 15.105391 18.96875 15.275391 L 20.287109 15.576172 C 21.716109 15.897172 22.378906 16.513281 22.378906 17.613281 C 22.378906 19.050281 21.059359 20.007813 19.193359 20.007812 C 17.327359 20.007812 16.151484 19.199844 16.021484 17.839844 L 17.697266 17.839844 C 17.861266 18.393844 18.386375 18.722656 19.234375 18.722656 C 20.088375 18.722656 20.683594 18.346969 20.683594 17.792969 C 20.683594 17.368969 20.363344 17.101359 19.652344 16.943359 L 18.326172 16.636719 C 16.890172 16.308719 16.214844 15.645578 16.214844 14.517578 C 16.214844 13.163578 17.443031 12.226562 19.207031 12.226562 z" />
+                            </svg>
+                          </div>
+                          <div class="service-content">
+                            <h3>Adobe Photoshop</h3>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr class="border">
+            <!-- My-work -->
+            <div class="portfolio my-work" id="myworks">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="title mb-2">
+                      <h1>My Works</h1>
+                    </div>
+                  </div>
+                </div>
+                <div class="tabs" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                  <ul class="nav nav-pills mb-3 pannel mb-5" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+                        aria-selected="true">Projects</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
+                        aria-selected="false">Banner-Design</button>
+                    </li>
+                  </ul>
+                  <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                      aria-labelledby="pills-home-tab">
+                      <div class="project-w-box">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="bottom-border mb-4">
+                              <div class="project-box">
+                                <div class="project-image">
+                                  <img src="./images/lotus-website.png" class="img-fluid" alt="">
+                                </div>
+                                <div class="enlarge-cap">
+                                  <a href="http://138.197.207.194/lotusalghanim/public/" class="stretched-link"
+                                    target="_blank"><i class="fa fa-expand" aria-hidden="true"></i></a>
+                                </div>
+                                <div class="project-content">
+                                  <h4>Lotus:- Book Your Test Drive</h4>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!--  -->
+                          <div class="col-md-6">
+                            <div class="bottom-border mb-4">
+                              <div class="project-box">
+                                <div class="project-image">
+                                  <img src="./images/Model-website.png" class="img-fluid" alt="">
+                                </div>
+                                <div class="enlarge-cap">
+                                  <a href=""><i class="fa fa-expand" aria-hidden="true"></i></a>
+                                </div>
+                                <div class="project-content">
+                                  <h4>NATALIA ZIBROVA :- Hibo</h4>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!--  -->
+                          <div class="col-md-6">
+                            <div class="bottom-border mb-4">
+                              <div class="project-box">
+                                <div class="project-image">
+                                  <img src="./images/dyr-website.png" class="img-fluid" alt="">
+                                </div>
+                                <div class="enlarge-cap">
+                                  <a href="https://doyouremember.com/media" target="_blank"><i class="fa fa-expand"
+                                      aria-hidden="true"></i></a>
+                                </div>
+                                <div class="project-content">
+                                  <h4>Do You Remember :- Dyr</h4>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!--  -->
+                          <div class="col-md-6">
+                            <div class="bottom-border mb-4">
+                              <div class="project-box">
+                                <div class="project-image">
+                                  <img src="./images/bolduc-and-sons.png" class="img-fluid" alt="">
+                                </div>
+                                <div class="enlarge-cap">
+                                  <a href="http://bolducandsons.wd309.org/" target="_blank"><i class="fa fa-expand"
+                                      aria-hidden="true"></i></a>
+                                </div>
+                                <div class="project-content">
+                                  <h4>Bolduc & Sons Inc</h4>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                      <div class="project-w-box">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="bottom-border mb-4">
+                              <div class="project-box">
+                                <div class="project-image">
+                                  <img src="./images/banner-1.jpg" class="img-fluid" alt="Android Banner">
+                                </div>
+                                <div class="enlarge-cap">
+                                  <a href=""><i class="fa fa-expand" aria-hidden="true"></i></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!--  -->
+                          <div class="col-md-6">
+                            <div class="bottom-border mb-4">
+                              <div class="project-box">
+                                <div class="project-image">
+                                  <img src="./images/banner-2.jpg" class="img-fluid" alt="">
+                                </div>
+                                <div class="enlarge-cap">
+                                  <a href=""><i class="fa fa-expand" aria-hidden="true"></i></a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!--  -->
+                          <div class="col-md-6">
+                            <div class="bottom-border mb-4">
+                              <div class="project-box">
+                                <div class="project-image">
+                                  <img src="./images/banner-3.jpg" class="img-fluid" alt="">
+                                </div>
+                                <div class="enlarge-cap">
+                                  <a href=""><i class="fa fa-expand" aria-hidden="true"></i></a>
+                                </div>
+
+                              </div>
+                            </div>
+                          </div>
+                          <!--  -->
+                          <div class="col-md-6">
+                            <div class="bottom-border mb-4">
+                              <div class="project-box">
+                                <div class="project-image">
+                                  <img src="./images/banner-4.png" class="img-fluid" alt="">
+                                </div>
+                                <div class="enlarge-cap">
+                                  <a href=""><i class="fa fa-expand" aria-hidden="true"></i></a>
+                                </div>
+
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Progress -->
+            <div class="portfolio skills" id="skills">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-12">
+                    <div class="title mb-2">
+                      <h1>Skills</h1>
+                    </div>
+                  </div>
+                </div>
+                <div class="skills-box">
+                  <div class="progress-skills">
+                    <span class="d-block text-end">90%</span>
+                    <div class="progress">
+                      <div class="progress-bar  slideInLeft " role="progressbar" style="width: 90%" aria-valuenow="25"
+                        aria-valuemin="0" aria-valuemax="100">HTML5</div>
+                    </div>
+                  </div>
+                  <div class="progress-skills">
+                    <span class="d-block text-end">85%</span>
+                    <div class="progress">
+                      <div class="progress-bar  slideInLeft " role="progressbar" style="width: 85%" aria-valuenow="25"
+                        aria-valuemin="0" aria-valuemax="100">CSS3</div>
+                    </div>
+                  </div>
+                  <div class="progress-skills">
+                    <span class="d-block text-end">85%</span>
+                    <div class="progress">
+                      <div class="progress-bar  slideInLeft " role="progressbar" style="width: 85%" aria-valuenow="25"
+                        aria-valuemin="0" aria-valuemax="100">Bootstrap</div>
+                    </div>
+                  </div>
+                  <div class="progress-skills">
+                    <span class="d-block text-end">80%</span>
+                    <div class="progress">
+                      <div class="progress-bar  slideInLeft " role="progressbar" style="width: 80%" aria-valuenow="25"
+                        aria-valuemin="0" aria-valuemax="100">Adobe Photoshop</div>
+                    </div>
+                  </div>
+                  <div class="progress-skills">
+                    <span class="d-block text-end">65%</span>
+                    <div class="progress">
+                      <div class="progress-bar  slideInLeft " role="progressbar" style="width: 65%" aria-valuenow="25"
+                        aria-valuemin="0" aria-valuemax="100">jQuery</div>
+                    </div>
+                  </div>
+                  <div class="progress-skills">
+                    <span class="d-block text-end">60%</span>
+                    <div class="progress">
+                      <div class="progress-bar  slideInLeft " role="progressbar" style="width: 60%" aria-valuenow="25"
+                        aria-valuemin="0" aria-valuemax="100">WordPress</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+    crossorigin="anonymous"></script>
+  <script src="https://use.fontawesome.com/bc9aba1d50.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="./js/jquery.min.js"></script>
+  <script src="./js/owl.carousel.min.js"></script>
+  <script src="./js/typed.min.js"></script>
+
+  <script>
+    AOS.init({
+      easing: 'ease-out-back',
+      duration: 900
+    });
+  </script>
+  <!-- <script>
+    $(document).ready(function () {
+      $('#owl-demo').owlCarousel({
+        items: 1,
+        autoHeight: true,
+        autoplay: false,
+        video: true,
+
+      })
+    });
+
+  </script> -->
+  <!-- <script>
+    var myCarousel = document.querySelector('#myCarousel')
+var carousel = new bootstrap.Carousel(myCarousel, {
+  interval: false,
+  touch:true,
+  keyboard:true,
+  wrap: false
+})
+  </script> -->
+
+
+
+
+  <script>
+
+    let toggleBtn = document.getElementById("sidebarCollapse");
+
+    toggleBtn.addEventListener("click", (e) => {
+
+      document.querySelector("#sidebar").classList.toggle("active");
+      document.querySelector("#sidebarCollapse").classList.toggle("active");
+
+    });
+
+    let sideMenus = document.querySelectorAll(".menu-select");
+    sideMenus.forEach((menuItem) => {
+      menuItem.addEventListener("click", () => {
+        document.querySelector("#sidebar").classList.remove("active");
+      });
+    });
+
+  </script>
+
+  <script>
+    let typed = new Typed(".typing", {
+      strings: ["Web Designer", "UI Designer", "Creative Designer"],
+      typeSpeed: 100,
+      backSpeed: 60,
+      loop: true,
+    });
+
+  </script>
+
+
+
+
+
+  <!-- Option 2: Separate Popper and Bootstrap JS -->
+  <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
